@@ -2,21 +2,26 @@
 
 class AnimalProducts
 {
-    // Declaring food, toys and kennels as instace variables
-    // Using keyword "protected" so that they can only be accessed by the class itself and any subclasses
-    protected string $food;
-    protected string $toys;
+    // Declaring properties of the class
+    // Using protected instead of private to allow the child classes to access them
+    protected string $image;
+    protected string $title;
 
-    // Kennels is "Cuccia" in Italian
-    protected string $kennels;
+    protected string $price;
 
-    // Declaring constructor method for AnimalProducts class
-    public function __construct(string $_food, string $_toys, string $_kennels)
+    protected string $icon_category;
+
+    protected string $article_type;
+
+    // Constructor method 
+    public function __construct(string $image, string $title, string $price, string $icon_category, string $article_type)
     {
-        $this->food = $_food;
-        $this->toys = $_toys;
-        $this->kennels = $_kennels;
+        $this->image = $image;
+        $this->title = $title;
+        $this->price = $price;
+        $this->icon_category = $icon_category;
+        $this->article_type = $article_type;
     }
-}
 
+}
 ?>
