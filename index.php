@@ -46,7 +46,7 @@ function printArray($arrayToBePrinted)
 
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-12">
                 <h1>Animal E-Commerce</h1>
             </div>
         </div>
