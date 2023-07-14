@@ -11,6 +11,7 @@ include __DIR__ . '/Classes/AnimalProducts.php';
 include __DIR__ . '/Classes/Toy.php';
 include __DIR__ . '/Classes/Food.php';
 include __DIR__ . '/Classes/Kennel.php';
+include __DIR__ . '/Database/db.php';
 
 
 function printArray($arrayToBePrinted)
@@ -48,13 +49,20 @@ function printArray($arrayToBePrinted)
         </div>
 
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-primary">View Product</a>
-            </div>
+            <?php
+            foreach ($products as $product) {
+                echo '<div class="card" style="width: 18rem;">';
+                echo '<img class="card-img-top" src="' . $product->getImage() . '" alt="Card image cap">';
+                echo '<div class="card-body">';
+                echo '<h5 class="card-title">' . $product->getTitle() . '</h5>';
+                echo '<p class="card-text">' . $product->getPrice() . '</p>';
+                echo '<a href="#" class="btn btn-primary">View Product</a>';
+                echo '<img class="card-img-top" src="' . $product->getIconCategory() . '" alt="Card image cap">';
+                echo '<p class="card-text">' . $product->getArticleType() . '</p>';
+                echo '</div>';
+                echo '</div>';
+            }
+            ?>
         </div>
 
     </div>

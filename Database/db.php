@@ -1,11 +1,4 @@
-<?php 
-    include __DIR__ . '/./Classes/AnimalProducts.php';
-    include __DIR__ . '/./Classes/Kennel.php';
-    include __DIR__ . '/./Classes/Toy.php';
-    include __DIR__ . '/./Classes/Food.php';
-
-    include __DIR__ . '/index.php';
-
+<?php
     $products = [
         // Dogs
         new Kennel ('https://m.media-amazon.com/images/I/71-tsDiw8iL._AC_UF894,1000_QL80_.jpg', 'Cuccia per cani', '€ 34,99', 'Dogs', 'https://thenounproject.com/icon/dog-house-462070/'),
