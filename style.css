@@ -1,0 +1,21 @@
+.title {
+    margin-bottom: 100px !important;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card-body {
+    height: 200px;
+}
+
+.card-img-top{
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+}
+
+.icon{
+    margin-left: 100px;
+}

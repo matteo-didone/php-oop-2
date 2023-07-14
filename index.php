@@ -46,29 +46,38 @@ function printArray($arrayToBePrinted)
 
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <h1>Animal E-Commerce</h1>
+            <div class="col-12 text-center">
+                <h1 class="title">Animal E-Commerce</h1>
             </div>
         </div>
 
-        <div class="card" style="width: 18rem;">
-            <?php
-            foreach ($products as $product) {
-                echo '<div class="card" style="width: 18rem;">';
-                echo '<img class="card-img-top" src="' . $product->getImage() . '" alt="Card image cap">';
-                echo '<div class="card-body">';
-                echo '<h5 class="card-title">' . $product->getTitle() . '</h5>';
-                echo '<p class="card-text">' . $product->getPrice() . '</p>';
-                echo '<a href="#" class="btn btn-primary">View Product</a>';
-                echo '<i>' . $product->getIconCategory() . '</i>';
-                echo '<p class="card-text">' . $product->getArticleType() . '</p>';
-                echo '</div>';
-                echo '</div>';
-            }
-            ?>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <?php
+                    $count = 0;
+                    foreach ($products as $product) {
+                        if ($count === 3) {
+                            echo '</div><div class="row">';
+                        }
+                        echo '<div class="col-12 col-md-4">';
+                        echo '<div class="card" style="width: 18rem;">';
+                        echo '<img class="card-img-top" src="' . $product->getImage() . '" alt="Card image cap">';
+                        echo '<div class="card-body">';
+                        echo '<h5 class="card-title">' . $product->getTitle() . '</h5>';
+                        echo '<p class="card-text">' . $product->getPrice() . '</p>';
+                        echo '<a href="#" class="btn btn-primary">View Product</a>';
+                        echo '<i class="icon">' . $product->getIconCategory() . '</i>';
+                        echo '<p class="card-text">' . $product->getArticleType() . '</p>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
+                        $count++;
+                    }
+                    ?>
+                </div>
+            </div>
         </div>
-
-    </div>
 </body>
 
 </html>
