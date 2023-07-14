@@ -1,6 +1,10 @@
 <?php
 /*
-Creare un layout completo per stampare a schermo una lista di movies.
+Imagine what classes are needed to create an online shop with the following characteristics:
+The e-commerce sells products for animals.
+The products are categorized into Dogs or Cats.
+In addition to food, the products will also include toys, kennels, etc.
+We print cards containing the details of the products, such as image, title, price, category icon, and the type of item being viewed (product, food, toy, kennel)
 */
 
 include __DIR__ . '/Models/movie.php';
