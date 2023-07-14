@@ -14,6 +14,28 @@ class Kennel extends AnimalProducts
         $this->icon_category = $icon_category;
     }
 
+    // Getters and Setters
+
+    public function getArticleType()
+    {
+        return $this->article_type;
+    }
+
+    public function setArticleType(string $article_type)
+    {
+        $this->article_type = $article_type;
+    }
+
+    public function getIconCategory()
+    {
+        return $this->icon_category;
+    }
+
+    public function setIconCategory(string $icon_category)
+    {
+        $this->icon_category = $icon_category;
+    }
+
 }
 
 ?>
