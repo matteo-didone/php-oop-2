@@ -8,8 +8,9 @@ We print cards containing the details of the products, such as image, title, pri
 */
 
 include __DIR__ . '/Classes/AnimalProducts.php';
-include __DIR__ . '/Classes/DogProducts.php';
-include __DIR__ . '/Classes/CatProducts.php';;
+include __DIR__ . '/Classes/Toy.php';
+include __DIR__ . '/Classes/Food.php';
+include __DIR__ . '/Classes/Kennel.php';
 
 
 function printArray($arrayToBePrinted) {
@@ -45,39 +46,7 @@ function printArray($arrayToBePrinted) {
             </div>
         </div>
 
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Release Year</th>
-                    <th scope="col">Movie Genre</th>
-                    <th scope="col">Movie Director</th>
-                    <th scope="col">Movie Rating</th>
-                    <th scope="col">Movie Cast</th>
-                    <th scope="col">Movie Description</th>
-                    <th scope="col">Movie Distributor</th>
-                    <th scope="col">Movie Production Studio</th>
-                </tr>
-            </thead>
-            
-            <tbody>
-                <?php foreach ($movies as $movie) { ?>
-                <tr>
-                    <td><?php echo $movie->getMovieTitle(); ?></td>
-                    <td><?php echo $movie->getReleaseYear(); ?></td>
-                    <td><?php printArray($movie->getMovieGenre()); ?></td>
-                    <td><?php echo $movie->getMovieDirector(); ?></td>
-                    <td><?php echo $movie->getMovieRating(); ?></td>
-                    <td><?php printArray($movie->getMovieCast()); ?></td>
-                    <td><?php echo $movie->getMovieDescription(); ?></td>
-                    <td><?php echo $movie->getMovieDistributor(); ?></td>
-                    <td><?php echo $movie->getMovieProductionStudio(); ?></td>
-                </tr>
-                <?php } ?>
-            </tbody>
 
-        </table>
     </div>
 </body>
 
